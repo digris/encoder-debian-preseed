@@ -24,9 +24,7 @@ gzip -d < ../cd/install.amd/initrd.gz | cpio --extract --verbose --make-director
 ### add preseed.cfg
 wget https://raw.githubusercontent.com/digris/encoder-debian-preseed/master/conf/preseed.cfg
 
-cd irmod
 find . | cpio -H newc --create --verbose | gzip -9 > ../cd/install.amd/initrd.gz
-
 
 cd ../
 
